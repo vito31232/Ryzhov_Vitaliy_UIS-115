@@ -21,7 +21,7 @@ double Cube::get_volume()
 
 double Cube::get_surface_area()
 {
-	return h * h * 6.0;
+	return h * h * U6;
 }
 
 std::ostream& operator<<(std::ostream& out, const Cube& c)

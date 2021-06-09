@@ -22,7 +22,7 @@ double Cylinder::get_volume()
 
 double Cylinder::get_surface_area()
 {
-    return (2 * M_PI * radius * radius) + (M_PI * radius * h);
+    return (U2 * M_PI * radius * radius) + (M_PI * radius * h);
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 #define _USE_MATH_DEFINES
-#include "math.h"
+#include <cmath>
 #include "Geometric_figure.h"
 #include <stdexcept>
 #include <ostream>
@@ -22,6 +22,8 @@ private:
     * \param радиус
     */
     void set_cylinder(double h, double radius);
+	
+	const double U2 = 2;
 public:
 
     /**

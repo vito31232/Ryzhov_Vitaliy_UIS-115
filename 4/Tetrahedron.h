@@ -16,6 +16,11 @@ private:
     * \param сторона
     */
     void set_sides(double a);
+	
+	const double U12 = 12;
+	const double U1 = 1;
+	const double U2 = 2;
+	const double U3 = 3;
 public:
     /**
     *\brief конструктор с параметрами

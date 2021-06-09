@@ -15,6 +15,8 @@ private:
     * \param сторона
     */
     void set_sides(double h);
+	
+	const double U6 = 6;
 public:
     /**
     *\brief метод, вычисл¤ющий площадь поверхности
