@@ -32,36 +32,20 @@ Vector::Vector(double x1, double y1, double x2, double y2)
 
 Vector Vector::operator+(const Vector& other)
 {
-	Vector temp;
-	temp.x1 = this->x1 + other.x1;
-	temp.y1 = this->y1 + other.y1;
-	temp.x2 = this->x2 + other.x2;
-	temp.y2 = this->y2 + other.y2;
-	return temp;
+	return Vector(this->x1 + other.x1, this->y1 + other.y1, this->x2 + other.x2, this->y2 + other.y2)
 }
 
 Vector Vector::operator-(const Vector& other)
 {
-	Vector temp;
-	temp.x1 = this->x1 - other.x1;
-	temp.y1 = this->y1 - other.y1;
-	temp.x2 = this->x2 - other.x2;
-	temp.y2 = this->y2 - other.y2;
-	return temp;
+	return Vector(this->x1 - other.x1, this->y1 - other.y1, this->x2 - other.x2, this->y2 - other.y2)
 }
 
 double Vector::operator*(const Vector& other)
 {
-	double x3 = this->x2 - this->x1;
-	double y3 = this->y2 - this->y1;
-	double x4 = other.x2 - other.x1;
-	double y4 = other.y2 - other.y1;
-	return x3 * x4 + y3 * x4;
+	return (this->x2 - this->x1) * (this->y2 - this->y1) + (other.x2 - other.x1) * (other.y2 - other.y1);
 }
 
 double Vector::get_length()
 {
-	double x3 = this->x2 - this->x1;
-	double y3 = this->y2 - this->y1;
-	return sqrt(x3 * x3 + y3 * y3);
+	return sqrt((this->x2 - this->x1) * (this->x2 - this->x1) + (this->y2 - this->y1) * (this->y2 - this->y1));
 }

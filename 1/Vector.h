@@ -4,68 +4,68 @@ class Vector
 {
 private:
 	/**
-	*\brief РєРѕСЂРґРёРЅР°С‚Р° x1
+	*\brief кордината x1
 	*/
 	double x1; 
 	/**
-	*\brief РєРѕСЂРґРёРЅР°С‚Р° x2
+	*\brief кордината x2
 	*/
 	double x2;
 	/**
-	*\brief РєРѕСЂРґРёРЅР°С‚Р° y1
+	*\brief кордината y1
 	*/
 	double y1;
 	/**
-	*\brief РєРѕСЂРґРёРЅР°С‚Р° y2
+	*\brief кордината y2
 	*/
 	double y2;
 public:
 	/**
-*\brief В РѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+*\brief Конструктор по умолчанию
 */
 	Vector();
 	/**
-	*\brief В РѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
-		* \param x1 РєРѕРѕСЂРґРёРЅР°С‚Р° x1
-		* \param y1 РєРѕРѕСЂРґРёРЅР°С‚Р° y1
-		* \param x2 РєРѕРѕСЂРґРёРЅР°С‚Р° x2
-		* \param y2 РєРѕРѕСЂРґРёРЅР°С‚Р° y2
+	*\brief Конструктор с параметрами
+		* \param x1 координата x1
+		* \param y1 координата y1
+		* \param x2 координата x2
+		* \param y2 координата y2
 	*/
 	explicit Vector(double x1, double y1, double x2, double y2);
 	/**
-	*\brief Ж’РµСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	*\brief Деструктор по умолчанию
 	*/
 	~Vector() = default;
 	/**
-	*\brief В РѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёВ¤ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	*\brief Конструктор копирования по умолчанию
 	*/
 	Vector(const  Vector&) = default;
 	/**
-	*\brief В РѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїСЂРёСЃРІРѕРµРЅРёВ¤ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	*\brief Конструктор присвоения по умолчанию
 	*/
 	Vector& operator=(const  Vector&) = default;
 	/**
-	*\brief С•РµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїСЂРµСЂР°С‚РѕСЂР° << 
+	*\brief Переопределение опрератора << 
 	*/
 	friend std::ostream& operator<<(std::ostream& out, Vector& P);
 	/**
-	*\brief С•РµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїСЂРµСЂР°С‚РѕСЂР° >>
+	*\brief Переопределение опрератора >>
 	*/
 	friend std::istream& operator>>(std::istream& in, Vector& P);
 	/**
-*\brief С•РµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїСЂРµСЂР°С‚РѕСЂР° +
+*\brief Переопределение опрератора +
 */
 	Vector operator+(const Vector& other);
 	/**
-*\brief С•РµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїСЂРµСЂР°С‚РѕСЂР° -
+*\brief Переопределение опрератора -
 */
 	Vector operator-(const Vector& other);
 	/**
-*\brief С•РµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ РѕРїСЂРµСЂР°С‚РѕСЂР° *
+*\brief Переопределение опрератора *
 */
 	double operator*(const Vector& other);
 	/**
-*\brief getter РґР»В¤ РґР»РёРЅС‹
+*\brief getter для длины
 */
 	double get_length();
 };
